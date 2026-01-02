@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 HORIZON — Student Dashboard (Demo)
 
-## Getting Started
+HORIZON is a small demo web app that showcases a modern student dashboard: courses, grades, and course detail pages with light/dark mode, responsive layouts, and smooth animations. It is frontend-only with mock data—ideal as an example or starting point.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 🔐 Authentication
+- Login page with email/password validation
+- LocalStorage-based session persistence
+- Demo credentials: any valid email + `password123`
+
+### 📊 Dashboard Pages
+1. **Dashboard Home** — animated stat cards (courses, average grade, attendance) and progress bars
+2. **Courses** — course cards with progress and instructor info; per-course detail pages with outline, tasks, and resources
+3. **Grades** — grade table with averages and color-coding
+
+### 🎨 UI/UX
+- Responsive design (mobile/tablet/desktop)
+- Light/dark mode toggle with persistence
+- Framer Motion entrance/hover animations
+- Modern lucide-react icon set
+
+## 🛠️ Tech Stack
+- Next.js 16 (App Router)
+- Tailwind CSS
+- Framer Motion
+- TypeScript
+- lucide-react
+
+## 📁 Project Structure (key paths)
+```
+app/
+├── components/           # Navbar, Sidebar, ThemeToggle, StatCard, CourseCard
+├── data/studentData.ts   # Mock student/courses data
+├── dashboard/            # Auth’d pages (home, courses, grades, course detail)
+└── page.tsx              # Login page
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
+Prereqs: Node 18+ and npm.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install deps and run dev server:
+```bash
+npm install
+npm run dev
+```
+Build for production:
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Key data file: mock student/course data lives in [app/data/studentData.ts](app/data/studentData.ts).
 
-## Learn More
+## 📝 Status
+- Demo/example only. Replace mock data and add real auth/backend before production use.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+See LICENSE (MIT) in the repo.
